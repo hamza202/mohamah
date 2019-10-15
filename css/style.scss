@@ -1,0 +1,361 @@
+//Variables
+$mainColor: #D59755;
+$blackColor: #1C1D2B;
+
+@import "bootstrap.min.css";
+
+//import
+@import "scss/_functions.scss";
+@import "scss/_variables.scss";
+@import "scss/mixins/_breakpoints.scss";
+@import "fontawesome-all.css";
+$spacers: map-merge(
+                (
+                        0: 0,
+                        1: ($spacer * .25),
+                        2: ($spacer * .5),
+                        3: $spacer,
+                        4: ($spacer * 1.5),
+                        5: ($spacer * 3),
+                        6: ($spacer * 4.5),
+                ),
+                $spacers
+);
+//Font
+@import url('https://fonts.googleapis.com/css?family=Tajawal:400,500,700,800,900&display=swap');
+// setting
+a:hover {
+  @extend %transition3
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.fw-800 {
+  font-weight: 800;
+}
+
+.fw-900 {
+  font-weight: 900;
+}
+
+.my-btn {
+  @extend %my-btn;
+}
+
+body {
+  direction: rtl;
+  font-family: 'Tajawal', sans-serif;
+  height: 3000px;
+}
+
+main {
+  //overflow: hidden;
+}
+
+.home-slider {
+  background: url(../img/home-bg.jpg) no-repeat;
+  background-size: cover;
+  height: 100vh;
+  padding-top: 145px;
+
+  .big-top-title {
+    @extend %before-line;
+    width: max-content;
+
+    h2 {
+      font-size: 37px;
+    }
+  }
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  .navbar {
+    padding-top: 20px;
+
+    .navbar-brand {
+      img {
+        max-height: 95px;
+        width: auto;
+      }
+    }
+
+    .navbar-nav {
+      .nav-item {
+        @include media-breakpoint-up(lg) {
+          padding-right: 30px;
+        }
+
+        &.active {
+          a {
+            color: $mainColor;
+          }
+        }
+
+        a {
+          font-weight: 500;
+          color: #fff;
+          font-size: 17px;
+          @extend %line-hover;
+
+          &:hover {
+            color: #fff;
+          }
+
+          &.login-btn {
+            @extend %my-btn;
+          }
+        }
+      }
+    }
+  }
+}
+
+.slider-steps {
+  span {
+    font-size: 40px;
+    color: #fff;
+  }
+
+  p {
+    color: white;
+    font-size: 18px;
+  }
+}
+
+.slider-img-container {
+  img {
+    border-radius: 49px;
+  }
+
+  width: 80%;
+  height: 100%;
+  z-index: 10;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.main-home-section {
+  position: relative;
+  overflow: hidden;
+  background-color: #fafafa;
+  padding-top: 14px;
+  margin-top: -75px;
+  &:before{
+    position: absolute;
+    content: '';
+    background: url(../img/shep1.png) no-repeat;
+    right: 15px;
+    top: 93px;
+    z-index: 0;
+    width: 167px;
+    height: 218px;
+    background-size: contain;
+    @include media-breakpoint-down(lg) {
+
+    }
+  }
+}
+.why-us{
+  background-color: #fafafa;
+  h2{
+    @extend %before-line;
+  }
+}
+.download-list {
+  .list-inline-item:not(:last-child) {
+    margin-left: 1.5rem;
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  a {
+    display: inline-block;
+
+    img {
+      max-height: 55px;
+      width: auto;
+    }
+  }
+}
+
+//who section
+.who-we-are-section {
+
+  @include media-breakpoint-up(lg) {
+    margin-top: 150px;
+  }
+
+  .col-lg-2 {
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      background-color: #EDB881;
+      opacity: 0.28;
+      height: 100%;
+      width: 85px;
+      right: -50px;
+      z-index: 0;
+    }
+  }
+
+  .who-box {
+    z-index: 1;
+
+    h5 {
+      font-size: 47px;
+    }
+
+    h4 {
+      font-size: 58px;
+      margin-top: -18px;
+      font-weight: 600;
+      color: $mainColor;
+    }
+
+    span {
+      top: 0;
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      text-align: left;
+      img{
+        width: 65%;
+      }
+
+    }
+  }
+}
+
+//Extend
+%before-line {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    display: block;
+    background-color: #D59755;
+    top: 8px;
+    height: 17px;
+    width: 300px;
+    left: calc(100% + 20px);
+  }
+}
+
+%line-hover {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: $mainColor;
+    @extend %transition3
+  }
+
+  &:hover:before {
+    width: 100%;
+  }
+}
+
+%transition5 {
+  -webkit-transition: all ease-in-out 0.5s;
+  -moz-transition: all ease-in-out 0.5s;
+  -o-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+}
+
+%transition3 {
+  -webkit-transition: all ease-in-out 0.3s;
+  -moz-transition: all ease-in-out 0.3s;
+  -o-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+}
+
+%my-btn {
+  @extend %transition3;
+  position: relative;
+  border: 0;
+  border-radius: 50px;
+  outline: none;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  background-color: $mainColor;
+  color: #fff;
+  padding: 8px 20px 10px 20px;
+  font-weight: 600;
+
+  &:focus, &:visited {
+    outline: none;
+  }
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+/*btn-4 Start*/
+.btn-4 {
+  overflow: hidden;
+  position: relative;
+}
+
+.btn-4:after {
+  background: #fff;
+  content: "";
+  height: 155px;
+  left: -75px;
+  opacity: .2;
+  position: absolute;
+  top: -50px;
+  -webkit-transform: rotate(35deg);
+  transform: rotate(35deg);
+  transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+  width: 50px;
+  z-index: 10;
+}
+
+.btn-4 > span {
+  z-index: 20;
+  position: relative;
+}
+
+.btn-4:hover:after {
+  left: 120%;
+  transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/*btn-4 End*/
+.h-85 {
+  height: 85%;
+}
+
+::selection {
+  background-color: $mainColor;
+  color: white;
+}
