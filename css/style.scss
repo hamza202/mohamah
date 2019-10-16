@@ -63,17 +63,28 @@ main {
 }
 
 .home-slider {
+
   background: url(../img/home-bg.jpg) no-repeat;
   background-size: cover;
   height: 100vh;
   padding-top: 145px;
-
+  @include media-breakpoint-between(md, lg) {
+    height: auto;
+    padding-bottom: 90px;
+  }
   .big-top-title {
     @extend %before-line;
     width: max-content;
-
+    h3{
+      @include media-breakpoint-down(sm){
+        font-size: 23px;
+      }
+    }
     h2 {
       font-size: 37px;
+      @include media-breakpoint-down(sm){
+        font-size: 30px;
+      }
     }
   }
 }
@@ -133,11 +144,16 @@ header {
     }
   }
 }
-
 .slider-steps {
+  @include media-breakpoint-down(sm){
+    margin-bottom: 20px;
+  }
   span {
     font-size: 40px;
     color: #fff;
+    @include media-breakpoint-down(sm){
+      font-size: 34px;
+    }
   }
 
   p {
