@@ -213,7 +213,7 @@
                     <div class="count-circle d-flex justify-content-center align-items-center text-center">
                         <div>
                             <img src="img/icon1.png" alt="">
-                            <h2><span class="counter" data-count="1700">0</span> + </h2>
+                            <h2><span class="counter">1700</span> + </h2>
                             <p>
                                 قضية تم علاجها
                             </p>
@@ -224,7 +224,7 @@
                     <div class="count-circle d-flex justify-content-center align-items-center text-center">
                         <div>
                             <img src="img/icon2.png" alt="">
-                            <h2><span class="counter" data-count="400">0</span> + </h2>
+                            <h2><span class="counter">450</span> + </h2>
                             <p>
                                 محامي متميز
                             </p>
@@ -235,7 +235,7 @@
                     <div class="count-circle d-flex justify-content-center align-items-center text-center">
                         <div>
                             <img src="img/icon3.png" alt="">
-                            <h2><span class="counter" data-count="1100">0</span> + </h2>
+                            <h2><span class="counter" >2478</span> + </h2>
                             <p>
                                 مستفيد مسجل
                             </p>
@@ -341,14 +341,19 @@
         <div class="sk-cube3 sk-cube"></div>
     </div>
 </section>
-<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.nicescroll.min.js"></script>
+<script src="js/waypoint.js"></script>
+
+<script src="js/jquery.counterup.min.js"></script>
+
 <script src="js/main.js"></script>
 <script>
-
-
-
+    $('.counter').counterUp({
+        delay: 10,
+        time: 1500
+    });
 </script>
 </body>
 </html>
