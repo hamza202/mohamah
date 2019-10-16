@@ -1,11 +1,17 @@
-$(function() {
-    $("body").niceScroll({
-        cursorborder: "0",
-        cursorcolor:"#D59755",
-        scrollspeed: 100
-    });
-});
 
+function detectmob() {
+    if(window.innerWidth >= 993 ) {
+        $(function() {
+            $("body").niceScroll({
+                cursorborder: "0",
+                cursorcolor:"#D59755",
+                scrollspeed: 100
+            });
+        });
+    } else {
+        console.log('false')
+    }
+}
 // var $document = $(document)
 // $document.scroll(function () {
 //         if ($document.scrollTop() >= 50) {
