@@ -12,34 +12,7 @@ function detectmob() {
         console.log('false')
     }
 }
-// var $document = $(document)
-// $document.scroll(function () {
-//         if ($document.scrollTop() >= 50) {
-//             $('.counter').each(function () {
-//                 var $this = $(this),
-//                     countTo = $this.attr('data-count');
-//
-//                 $({countNum: $this.text()}).animate({
-//                         countNum: countTo
-//                     },
-//                     {
-//                         duration: 2000,
-//                         easing: 'linear',
-//                         step: function () {
-//                             $this.text(Math.floor(this.countNum));
-//                         },
-//                         complete: function () {
-//                             $this.text(this.countNum);
-//                             //alert('finished');
-//                         }
-//                     });
-//             });
-//         }
-//     }
-// );
-
-
-
+detectmob();
 $(document).ready(function()
 {
     $(".loading-overly").fadeOut(1500,
@@ -47,4 +20,11 @@ $(document).ready(function()
         {
             $(this).remove();
         });
+});
+$(window).scroll(function(){
+    var sticky = $('.sticky'),
+        scroll = $(window).scrollTop();
+
+    if (scroll >= 200) sticky.addClass('fixed');
+    else sticky.removeClass('fixed');
 });

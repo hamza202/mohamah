@@ -24,6 +24,21 @@ body {
   direction: rtl;
   font-family: 'Tajawal', sans-serif; }
 
+.sup-page-header {
+  width: 100%;
+  height: 121px;
+  background-color: white;
+  position: relative; }
+  .sup-page-header header .navbar {
+    padding-top: 0.5rem; }
+  .sup-page-header .navbar .navbar-nav .nav-item a {
+    color: #1C1D2B; }
+    @media (max-width: 991.98px) {
+      .sup-page-header .navbar .navbar-nav .nav-item a {
+        color: white; } }
+  .sup-page-header .fixed .navbar .navbar-nav .nav-item a {
+    color: white; }
+
 .loading-overly {
   position: fixed;
   top: 0;
@@ -269,7 +284,7 @@ header {
     color: #D59755; }
 
 .navbar-light .navbar-toggler {
-  border-color: #fff; }
+  border-color: #D59755; }
 
 .navbar-light .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(213, 151, 85, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>"); }
@@ -277,6 +292,36 @@ header {
 .black-color {
   color: #1C1D2B; }
 
+.black-logo {
+  display: none; }
+
+.fixed.sticky {
+  position: fixed;
+  -webkit-animation: mymove 0.5s;
+  /* Safari 4.0 - 8.0 */
+  animation: mymove 0.5s;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  background-color: #1C1D2B;
+  z-index: 1000; }
+  .fixed.sticky .navbar {
+    padding-top: 15px; }
+  .fixed.sticky .black-logo {
+    display: inline-block; }
+    .fixed.sticky .black-logo img {
+      max-height: 45px;
+      width: auto; }
+  .fixed.sticky .white-logo {
+    display: none; }
+  .fixed.sticky .navbar .navbar-nav .nav-item.active a {
+    color: #D59755; }
+
+@-webkit-keyframes mymove {
+  from {
+    top: -100px; }
+  to {
+    top: 0; } }
 .sk-folding-cube {
   margin: 50vh auto;
   width: 40px;
@@ -403,6 +448,73 @@ header {
     max-width: 135px;
     height: auto; }
 
+.sup-page-content {
+  position: relative;
+  overflow: hidden; }
+  .sup-page-content:before {
+    content: '';
+    display: block;
+    top: 20px;
+    background: url(../img/shep3.png) no-repeat right;
+    background-size: contain;
+    width: 260px;
+    position: absolute;
+    right: -131px;
+    height: 378px; }
+    @media (max-width: 991.98px) {
+      .sup-page-content:before {
+        display: none; } }
+  .sup-page-content:after {
+    content: '';
+    display: block;
+    top: 20px;
+    background: url(../img/shep3.png) no-repeat right;
+    background-size: contain;
+    width: 260px;
+    position: absolute;
+    left: -131px;
+    height: 378px; }
+    @media (max-width: 991.98px) {
+      .sup-page-content:after {
+        display: none; } }
+
+.who-title h2 {
+  margin-top: 40px;
+  color: #CACACA;
+  font-weight: 700;
+  font-size: 60px; }
+  .who-title h2 span {
+    font-weight: 500; }
+.who-title h5 {
+  color: #1C1D2B;
+  margin-top: 5px;
+  display: inline-block;
+  padding: 10px 20px; }
+  @media (max-width: 991.98px) {
+    .who-title h5 {
+      font-size: 16px; } }
+
+.who-title h5 {
+  position: relative; }
+  .who-title h5:before {
+    content: '';
+    height: 100%;
+    display: block;
+    position: absolute;
+    width: 2px;
+    top: 0;
+    left: 0;
+    background-color: #D59755; }
+  .who-title h5:after {
+    content: '';
+    height: 100%;
+    display: block;
+    position: absolute;
+    width: 2px;
+    top: 0;
+    right: 0;
+    background-color: #D59755; }
+
 .read-more {
   position: relative;
   display: inline-block; }
@@ -442,6 +554,12 @@ header .navbar .navbar-nav .nav-item a, .footer-container .footer-lest li a {
     background-color: #D59755; }
   header .navbar .navbar-nav .nav-item a:hover:before, .footer-container .footer-lest li a:hover:before {
     width: 100%; }
+
+header, .fixed.sticky .navbar {
+  -webkit-transition: all ease-in-out 0.5s;
+  -moz-transition: all ease-in-out 0.5s;
+  -o-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s; }
 
 a:hover, .read-more i, .color-hover:hover, header .navbar .navbar-nav .nav-item a:before, .footer-container .footer-lest li a:before, .my-btn, header .navbar .navbar-nav .nav-item a.login-btn {
   -webkit-transition: all ease-in-out 0.3s;
