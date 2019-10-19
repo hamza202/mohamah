@@ -33,11 +33,15 @@ body {
     padding-top: 0.5rem; }
   .sup-page-header .navbar .navbar-nav .nav-item a {
     color: #1C1D2B; }
+    .sup-page-header .navbar .navbar-nav .nav-item a:hover {
+      color: #1C1D2B; }
     @media (max-width: 991.98px) {
       .sup-page-header .navbar .navbar-nav .nav-item a {
         color: white; } }
   .sup-page-header .fixed .navbar .navbar-nav .nav-item a {
     color: white; }
+    .sup-page-header .fixed .navbar .navbar-nav .nav-item a:hover {
+      color: white; }
 
 .loading-overly {
   position: fixed;
@@ -448,18 +452,21 @@ header {
     max-width: 135px;
     height: auto; }
 
+.mt--100px {
+  margin-top: -100px; }
+
 .sup-page-content {
-  position: relative;
-  overflow: hidden; }
+  position: relative; }
   .sup-page-content:before {
     content: '';
     display: block;
     top: 20px;
     background: url(../img/shep3.png) no-repeat right;
+    background-position: -130px;
     background-size: contain;
     width: 260px;
     position: absolute;
-    right: -131px;
+    left: 0;
     height: 378px; }
     @media (max-width: 991.98px) {
       .sup-page-content:before {
@@ -469,10 +476,11 @@ header {
     display: block;
     top: 20px;
     background: url(../img/shep3.png) no-repeat right;
+    background-position: 130px;
     background-size: contain;
     width: 260px;
     position: absolute;
-    left: -131px;
+    right: 0;
     height: 378px; }
     @media (max-width: 991.98px) {
       .sup-page-content:after {
@@ -488,15 +496,62 @@ header {
 .who-title h5 {
   color: #1C1D2B;
   margin-top: 5px;
-  display: inline-block;
   padding: 10px 20px; }
   @media (max-width: 991.98px) {
     .who-title h5 {
       font-size: 16px; } }
 
-.who-title h5 {
-  position: relative; }
-  .who-title h5:before {
+.condition-title h2 {
+  font-weight: 700;
+  min-width: 200px;
+  color: #1C1D2B;
+  padding: 10px 20px; }
+  @media (max-width: 991.98px) {
+    .condition-title h2 {
+      font-size: 20px; } }
+
+.pge--top {
+  margin-top: -100px; }
+  .pge--top .accordion {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem; }
+  @media (max-width: 991.98px) {
+    .pge--top {
+      margin-top: -70px; } }
+
+.accordion .card {
+  border-radius: 0;
+  border: 0;
+  margin-bottom: 15px;
+  background-color: #F5F5F5; }
+  .accordion .card .card-header {
+    padding: 0; }
+    .accordion .card .card-header button.btn {
+      position: relative;
+      display: block;
+      text-align: right;
+      width: 100%;
+      padding: 15px 20px; }
+      .accordion .card .card-header button.btn.collapsed i {
+        transform: translateY(-50%) rotate(0deg);
+        color: #1C1D2B; }
+      .accordion .card .card-header button.btn:focus {
+        box-shadow: none; }
+      .accordion .card .card-header button.btn i {
+        position: absolute;
+        font-size: 29px;
+        color: #D59755;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%) rotate(-180deg);
+        transition: all ease-in-out 0.3s; }
+  .accordion .card .card-body {
+    background-color: #F5F5F5; }
+
+.who-title h5, .condition-title h2 {
+  position: relative;
+  display: inline-block; }
+  .who-title h5:before, .condition-title h2:before {
     content: '';
     height: 100%;
     display: block;
@@ -505,7 +560,7 @@ header {
     top: 0;
     left: 0;
     background-color: #D59755; }
-  .who-title h5:after {
+  .who-title h5:after, .condition-title h2:after {
     content: '';
     height: 100%;
     display: block;
