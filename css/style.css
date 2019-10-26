@@ -1,5 +1,7 @@
 @import url(bootstrap.min.css);
 @import url(fontawesome-all.css);
+@import url(sweetalert2.css);
+@import url(pikaday.css);
 @import url("https://fonts.googleapis.com/css?family=Tajawal:400,500,700,800,900&display=swap");
 a:hover {
   text-decoration: none;
@@ -407,6 +409,9 @@ header {
     -webkit-transform: perspective(140px) rotateY(180deg);
     transform: perspective(140px) rotateY(180deg);
     opacity: 0; } }
+.footer {
+  border-top: 1px solid rgba(112, 112, 112, 0.42); }
+
 .footer-container {
   background: #fafafa;
   position: relative; }
@@ -548,6 +553,147 @@ header {
   .accordion .card .card-body {
     background-color: #F5F5F5; }
 
+.form-container {
+  background-color: #FAFAFA; }
+
+.form-outer {
+  border-radius: 5px;
+  border: 1px solid rgba(112, 112, 112, 0.55);
+  background-color: white;
+  padding: 30px 15px; }
+
+.second-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #D59755; }
+
+.form-control {
+  background-color: #f1f1f1;
+  border: 0;
+  height: 47px;
+  font-weight: 500; }
+
+.form-control:focus {
+  border-color: #d59755;
+  box-shadow: 0 0 0 0.2rem rgba(213, 151, 85, 0.35); }
+
+.number-group .input-group-text {
+  background-color: #F1F1F1;
+  color: #D59755;
+  font-weight: 600;
+  border: 0;
+  position: relative; }
+  .number-group .input-group-text:before {
+    position: absolute;
+    right: 5px;
+    content: '';
+    width: 1px;
+    height: 10px;
+    display: block;
+    background-color: #1C1D2B;
+    top: 50%;
+    transform: translateY(-50%); }
+
+.forget-pass-link {
+  color: #8F8F8F;
+  font-size: 15px; }
+  .forget-pass-link:hover {
+    color: #D59755; }
+
+.link-2 {
+  color: #D59755; }
+  .link-2:hover {
+    color: #1C1D2B; }
+
+.parsley-errors-list {
+  position: absolute;
+  bottom: -20px;
+  font-size: 15px;
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  color: red; }
+
+input.parsley-error,
+input.error, select.error {
+  border: 1px solid red !important; }
+
+label.error {
+  color: red;
+  position: absolute;
+  bottom: -29px;
+  font-size: 15px;
+  right: 0; }
+
+.big-btn {
+  height: 48px; }
+
+.form-group {
+  position: relative; }
+
+p.commands {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0; }
+
+p.commands button#step1Prev,
+p.commands button#step2Prev,
+p.commands button#step3Prev {
+  order: 2;
+  border-radius: 11px; }
+
+p.commands button:nth-child(2) {
+  order: 0; }
+
+.new-acc-label label {
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  border: 1px solid #707070;
+  border-radius: 15px;
+  padding: 20px 5px; }
+.new-acc-label input {
+  display: none; }
+  .new-acc-label input:checked + label {
+    -webkit-box-shadow: 0px 3px 15px 2px #e4d7c9;
+    -moz-box-shadow: 0px 3px 15px 2px #e4d7c9;
+    box-shadow: 0px 3px 15px 2px #e4d7c9;
+    border-color: #D59755; }
+    .new-acc-label input:checked + label h4 {
+      color: #D59755; }
+    .new-acc-label input:checked + label #Path_1194, .new-acc-label input:checked + label #Path_1238 {
+      fill: #D59755 !important; }
+
+.form-outer input[type=number]::-webkit-inner-spin-button,
+.form-outer input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+.my-select {
+  position: relative; }
+  .my-select select {
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: ''; }
+  .my-select:before {
+    position: absolute;
+    left: 12px;
+    font-size: 19px;
+    z-index: 2;
+    color: #8F8F8F;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: "Font Awesome 5 pro";
+    content: "\f107"; }
+
 .who-title h5, .condition-title h2 {
   position: relative;
   display: inline-block; }
@@ -616,7 +762,7 @@ header, .fixed.sticky .navbar {
   -o-transition: all ease-in-out 0.5s;
   transition: all ease-in-out 0.5s; }
 
-a:hover, .read-more i, .color-hover:hover, header .navbar .navbar-nav .nav-item a:before, .footer-container .footer-lest li a:before, .my-btn, header .navbar .navbar-nav .nav-item a.login-btn {
+a:hover, .read-more i, .color-hover:hover, .forget-pass-link, .new-acc-label label, .new-acc-label input:checked + label h4, .new-acc-label input:checked + label #Path_1194, .new-acc-label input:checked + label #Path_1238, header .navbar .navbar-nav .nav-item a:before, .footer-container .footer-lest li a:before, .my-btn, header .navbar .navbar-nav .nav-item a.login-btn {
   -webkit-transition: all ease-in-out 0.3s;
   -moz-transition: all ease-in-out 0.3s;
   -o-transition: all ease-in-out 0.3s;
