@@ -106,3 +106,16 @@ var picker = new Pikaday({
         return `${day}/${month}/${year}`;
     },
 });
+
+//upload custom
+$('.custom-file-input').bind('change', function () {
+    var filename = $(this).val();
+    if (/^\s*$/.test(filename)) {
+        $(this).next().next('.custom-file-label').text("لم يتم اختيار صورة");
+        $(this).next('.custom-file-label').text("لم يتم اختيار صورة");
+
+    } else {
+        $(this).next().next('.custom-file-label').text(filename.replace("C:\\fakepath\\", ""));
+        $(this).next('.custom-file-label').text(filename.replace("C:\\fakepath\\", ""));
+    }
+});

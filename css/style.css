@@ -694,6 +694,29 @@ input[type=number]::-webkit-outer-spin-button {
     font-family: "Font Awesome 5 pro";
     content: "\f107"; }
 
+.custom-file-container .custom-file-label::after {
+  display: none; }
+.custom-file-container .custom-file-input {
+  height: 47px;
+  cursor: pointer; }
+.custom-file-container .custom-file-label {
+  background-color: #f1f1f1;
+  border: 0;
+  height: 47px;
+  font-weight: 500;
+  line-height: 35px;
+  cursor: pointer; }
+  .custom-file-container .custom-file-label:before {
+    position: absolute;
+    left: 15px;
+    content: '';
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 30px;
+    background: url(../img/upload-bg.png) no-repeat;
+    background-size: contain; }
+
 .who-title h5, .condition-title h2 {
   position: relative;
   display: inline-block; }

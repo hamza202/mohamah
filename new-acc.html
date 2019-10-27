@@ -54,79 +54,7 @@
 
 
             <form id="SignupForm" action="">
-                <div class="row justify-content-center">
-                    <div class="col-lg-10 col-md-10">
 
-                        <fieldset class="form-outer p-5">
-                            <div class="text-center mb-4">
-                                <h2 class="second-title">أكمل معلوماتك</h2>
-                                <p>أكمل الحقول التالية بالمعلومات المطلوبة</p>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group mb-4">
-                                        <input name="name" placeholder="الإسم رباعي" type="text"
-                                               class="form-control" required/>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group mb-4">
-                                        <input name="email" placeholder="بريد الكتروني" type="email"
-                                               class="form-control" required/>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group mb-4">
-                                        <div class="my-select">
-                                            <select class="form-control my-select" name="gender">
-                                                <option value="">الجنس</option>
-                                                <option value="male">ذكر</option>
-                                                <option value="female">أنثى</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group mb-4">
-                                        <input class="form-control" name="date" placeholder="تاريخ الميلاد" type="text"
-                                               id="datepicker" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group mb-4">
-                                        <div class="my-select">
-                                            <select class="form-control my-select" name="nationality">
-                                                <option value="">الجنسية</option>
-                                                <option value="1">1</option>
-                                                <option value="1">2</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group mb-4">
-                                        <div class="my-select">
-                                            <select  class="form-control my-select" name="country">
-                                                <option value="">الدولة</option>
-                                                <option value="1">1</option>
-                                                <option value="1">2</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="file-upload mb-4">
-                                        <div class="file-select">
-                                            <div class="file-select-button" id="fileName">Choose File</div>
-                                            <div class="file-select-name" id="noFile">No file chosen...</div>
-                                            <input type="file" name="chooseFile" id="chooseFile">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </fieldset>
-                    </div>
-                </div>
                 <div class="row justify-content-center">
                     <div class="col-lg-5 col-md-8">
 
@@ -3543,7 +3471,86 @@
                         </fieldset>
                     </div>
                 </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 col-md-10">
 
+                        <fieldset class="form-outer p-5">
+                            <div class="text-center mb-4">
+                                <h2 class="second-title">أكمل معلوماتك</h2>
+                                <p>أكمل الحقول التالية بالمعلومات المطلوبة</p>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group mb-4">
+                                        <input name="name" placeholder="الإسم رباعي" type="text"
+                                               class="form-control" required/>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group mb-4">
+                                        <input name="email" placeholder="بريد الكتروني" type="email"
+                                               class="form-control" required/>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group mb-4">
+                                        <div class="my-select">
+                                            <select class="form-control my-select" name="gender">
+                                                <option value="">الجنس</option>
+                                                <option value="male">ذكر</option>
+                                                <option value="female">أنثى</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group mb-4">
+                                        <input class="form-control" name="date" placeholder="تاريخ الميلاد" type="text"
+                                               id="datepicker" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group mb-4">
+                                        <div class="my-select">
+                                            <select class="form-control my-select" name="nationality">
+                                                <option value="">الجنسية</option>
+                                                <option value="1">1</option>
+                                                <option value="1">2</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group mb-4">
+                                        <div class="my-select">
+                                            <select  class="form-control my-select" name="country">
+                                                <option value="">الدولة</option>
+                                                <option value="1">1</option>
+                                                <option value="1">2</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group mb-4 custom-file-container">
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="customFile">
+                                            <label class="custom-file-label" for="customFile">رفع رخصة المزاولة (اختياري)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group mb-4 custom-file-container">
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="customFile2">
+                                            <label class="custom-file-label" for="customFile2">ارفع صورة لملفك الشخصي (اختياري)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
                 <p>
                     <button id="SaveAccount" class="my-btn btn-4">تأكيد</button>
                 </p>

@@ -7,6 +7,7 @@
       <change beforePath="$PROJECT_DIR$/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-acc.html" beforeDir="false" afterPath="$PROJECT_DIR$/new-acc.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,6 +71,7 @@
       <workItem from="1571434131720" duration="8596000" />
       <workItem from="1571501189178" duration="4915000" />
       <workItem from="1571893894435" duration="38898000" />
+      <workItem from="1572151241194" duration="1109000" />
     </task>
     <servers />
   </component>
