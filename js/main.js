@@ -119,3 +119,8 @@ $('.custom-file-input').bind('change', function () {
         $(this).next('.custom-file-label').text(filename.replace("C:\\fakepath\\", ""));
     }
 });
+
+$('.counter').counterUp({
+    delay: 10,
+    time: 1500
+});

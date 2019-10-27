@@ -19,7 +19,117 @@ a:hover {
   text-decoration: none;
   color: initial;
 }
+//Extend
+%before-after-title{
+  position: relative;
+  display: inline-block;
+  &:before{
+    content: '';
+    height: 100%;
+    display: block;
+    position: absolute;
+    width: 2px;
+    top:0;
+    left: 0;
+    background-color: $mainColor;
+  }
+  &:after{
+    content: '';
+    height: 100%;
+    display: block;
+    position: absolute;
+    width: 2px;
+    top:0;
+    right: 0;
+    background-color: $mainColor;
+  }
+}
+%under-link {
+  position: relative;
+  display: inline-block;
 
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: $mainColor;
+    bottom: -2px;
+    transition: all ease-in-out 0.3s;
+  }
+
+  &:hover:before {
+    width: 15px;
+  }
+}
+%before-line {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    display: block;
+    background-color: #D59755;
+    top: 8px;
+    height: 17px;
+    width: 300px;
+    left: calc(100% + 20px);
+  }
+}
+%line-hover {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: $mainColor;
+    @extend %transition3
+  }
+
+  &:hover:before {
+    width: 100%;
+  }
+}
+%transition5 {
+  -webkit-transition: all ease-in-out 0.5s;
+  -moz-transition: all ease-in-out 0.5s;
+  -o-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+}
+%transition3 {
+  -webkit-transition: all ease-in-out 0.3s;
+  -moz-transition: all ease-in-out 0.3s;
+  -o-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+}
+%my-btn {
+  @extend %transition3;
+  position: relative;
+  border: 0;
+  border-radius: 50px;
+  outline: none;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  background-color: $mainColor;
+  color: #fff;
+  padding: 8px 20px 10px 20px;
+  font-weight: 600;
+
+  &:focus, &:visited {
+    outline: none;
+  }
+
+  &:hover {
+    color: #fff;
+  }
+}
+//End Extend
 .fw-400 {
   font-weight: 400;
 }
@@ -59,8 +169,28 @@ body {
   }
   .navbar .navbar-nav .nav-item a{
     color: $blackColor;
+    &.log-out-btn{
+      margin-top: -2px;
+      border: 1px solid transparent;
+      background-color: #F1F1F1;
+      color: #797979;
+      font-weight: 500;
+      @extend %my-btn;
+      &:hover{
+        background-color: $blackColor;
+      }
+      @include media-breakpoint-down(md){
+        margin-top: 10px;
+        &:hover{
+          border: 1px solid #fff;
+        }
+      }
+    }
     &:hover{
       color: $blackColor;
+      @include media-breakpoint-down(md){
+        color: white;
+      }
     }
     @include media-breakpoint-down(md){
       color: white;
@@ -68,9 +198,12 @@ body {
   }
   .fixed{
     .navbar .navbar-nav .nav-item a{
-      color: white;
-      &:hover{
+      &:not(.log-out-btn) {
         color: white;
+
+        &:hover {
+          color: white;
+        }
       }
     }
   }
@@ -133,7 +266,8 @@ header {
 
   .navbar {
     padding-top: 20px;
-
+    padding-left: 0;
+    padding-right: 0;
     .navbar-collapse {
       @include media-breakpoint-down(md) {
         text-align: center;
@@ -152,21 +286,27 @@ header {
 
     .navbar-nav {
       .nav-item {
-        @include media-breakpoint-up(md) {
+        @include media-breakpoint-up(lg) {
           padding-right: 30px;
         }
 
         &.active {
           a {
             color: $mainColor;
+
           }
         }
 
         a {
+          @include media-breakpoint-down(lg) {
+            display: inline-block;
+          }
           font-weight: 500;
           color: #fff;
           font-size: 17px;
-          @extend %line-hover;
+          &:not(.log-out-btn){
+            @extend %line-hover;
+          }
 
           &:hover {
             color: #fff;
@@ -174,6 +314,9 @@ header {
 
           &.login-btn {
             @extend %my-btn;
+            @include media-breakpoint-down(lg) {
+              margin-top: 10px;
+            }
           }
         }
       }
@@ -993,123 +1136,39 @@ input[type=number]::-webkit-outer-spin-button {
     }
   }
 }
-
-//Extend
-%before-after-title{
-  position: relative;
-  display: inline-block;
-  &:before{
-    content: '';
-    height: 100%;
-    display: block;
-    position: absolute;
-    width: 2px;
-    top:0;
-    left: 0;
-    background-color: $mainColor;
-  }
-  &:after{
-    content: '';
-    height: 100%;
-    display: block;
-    position: absolute;
-    width: 2px;
-    top:0;
-    right: 0;
-    background-color: $mainColor;
-  }
+.bg-light {
+  background-color: #fafafa!important;
 }
-%under-link {
-  position: relative;
-  display: inline-block;
-
-  &:before {
-    content: '';
-    display: block;
-    position: absolute;
-    height: 2px;
-    width: 100%;
-    background-color: $mainColor;
-    bottom: -2px;
-    transition: all ease-in-out 0.3s;
-  }
-
-  &:hover:before {
-    width: 15px;
-  }
-}
-
-%before-line {
-  position: relative;
-
-  &:before {
-    content: '';
-    position: absolute;
-    display: block;
-    background-color: #D59755;
-    top: 8px;
-    height: 17px;
-    width: 300px;
-    left: calc(100% + 20px);
-  }
-}
-
-%line-hover {
-  position: relative;
-
-  &:before {
-    content: '';
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    height: 2px;
-    width: 0;
-    background-color: $mainColor;
-    @extend %transition3
-  }
-
-  &:hover:before {
-    width: 100%;
-  }
-}
-
-%transition5 {
-  -webkit-transition: all ease-in-out 0.5s;
-  -moz-transition: all ease-in-out 0.5s;
-  -o-transition: all ease-in-out 0.5s;
-  transition: all ease-in-out 0.5s;
-}
-
-%transition3 {
-  -webkit-transition: all ease-in-out 0.3s;
-  -moz-transition: all ease-in-out 0.3s;
-  -o-transition: all ease-in-out 0.3s;
-  transition: all ease-in-out 0.3s;
-}
-
-%my-btn {
-  @extend %transition3;
-  position: relative;
-  border: 0;
-  border-radius: 50px;
-  outline: none;
-  display: inline-block;
-  text-align: center;
-  cursor: pointer;
+.top-bar{
   background-color: $mainColor;
-  color: #fff;
-  padding: 8px 20px 10px 20px;
-  font-weight: 600;
-
-  &:focus, &:visited {
-    outline: none;
-  }
-
-  &:hover {
-    color: #fff;
+  ul{
+    li{
+      margin: 0 !important;
+      &.active{
+        a{
+          background-color: #fafafa;
+          color: $mainColor;
+        }
+      }
+      a{
+        display: block;
+        padding: 15px 20px;
+        color: white;
+        cursor: pointer;
+        @extend %transition3;
+        &:hover{
+          background-color: #fafafa;
+          color: $mainColor;
+        }
+      }
+    }
   }
 }
+.icon-btn{
+  i{
 
+  }
+}
 /*btn-4 Start*/
 .btn-4 {
   overflow: hidden;
