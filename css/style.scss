@@ -11,6 +11,8 @@ $blackColor: #1C1D2B;
 @import "fontawesome-all.css";
 @import "sweetalert2.css";
 @import "pikaday.css";
+@import "font/font-fileuploader.css";
+@import "jquery.fileuploader.min.css";
 //Font
 @import url('https://fonts.googleapis.com/css?family=Tajawal:400,500,700,800,900&display=swap');
 // setting
@@ -118,7 +120,7 @@ a:hover {
   cursor: pointer;
   background-color: $mainColor;
   color: #fff;
-  padding: 8px 20px 10px 20px;
+  padding: 9px 20px 10px 20px;
   font-weight: 600;
 
   &:focus, &:visited {
@@ -171,19 +173,17 @@ body {
     color: $blackColor;
     &.log-out-btn{
       margin-top: -2px;
-      border: 1px solid transparent;
+      border: 2px solid transparent;
       background-color: #F1F1F1;
       color: #797979;
       font-weight: 500;
       @extend %my-btn;
       &:hover{
         background-color: $blackColor;
+        border: 2px solid #fff;
       }
       @include media-breakpoint-down(md){
         margin-top: 10px;
-        &:hover{
-          border: 1px solid #fff;
-        }
       }
     }
     &:hover{
@@ -621,7 +621,6 @@ header {
   background-color: $blackColor;
   z-index: 1000;
   .navbar {
-    padding-top: 15px;
     @extend %transition5
   }
   .black-logo {
@@ -964,6 +963,7 @@ header {
   border: 0;
   height: 47px;
   font-weight: 500;
+    resize: none;
 }
 .form-control:focus{
   border-color: #d59755;
@@ -1167,6 +1167,32 @@ input[type=number]::-webkit-outer-spin-button {
 .icon-btn{
   i{
 
+  }
+}
+.input-group-append{
+  margin-right: 0;
+}
+.fileuploader-input .fileuploader-input-button{
+  width: 100%;
+  text-align: center;
+  background: $blackColor
+}
+.fileuploader-input .fileuploader-input-caption{
+  position: absolute;
+  z-index: -11;
+  opacity: 0;
+}
+.fileuploader{
+  position: relative;
+  &:after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 100%;
+    right: 0;
+    height: 30px;
+    background-color: #ffffff;
+    bottom: -37px;
   }
 }
 /*btn-4 Start*/

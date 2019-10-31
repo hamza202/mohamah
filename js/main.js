@@ -82,7 +82,7 @@ $(function () {
     });
 });
 
-
+//sweet alert
 $('.disabled-click').on('click', function () {
     $('#acc1').attr("disabled", true);
     Swal.fire({
@@ -94,6 +94,7 @@ $('.disabled-click').on('click', function () {
     })
 });
 
+//calendar piker
 var picker = new Pikaday({
     yearRange: [1930, 2019], field: document.getElementById('datepicker'), format: 'dd/mm/yy',
     toString(date, format) {
@@ -120,7 +121,35 @@ $('.custom-file-input').bind('change', function () {
     }
 });
 
+//count up
 $('.counter').counterUp({
     delay: 10,
     time: 1500
+});
+
+$("#new_case_form").validate({
+    rules: {
+        gender: {
+            required: true,
+        }
+
+    },
+    messages: {
+        country: "الرجاء اختر دولتك",
+        nationality: "الرجاء اختر جنسيتك",
+        case_details:{
+          minlength:  $.validator.format("يجب ادخال على الأقل {0} احرف"),
+        },
+        phone: {
+            maxlength: $.validator.format(" الرقم غير صحيح"),
+            minlength: $.validator.format("الرقم غير صحيح"),
+        }
+    }
+});
+$(document).ready(function() {
+
+    $('input#multi-files').fileuploader({
+        addMore: true,
+    });
+
 });

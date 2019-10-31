@@ -2,24 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36f099e4-a1b3-440f-ac96-d3f7128e2d04" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conditions.html" beforeDir="false" afterPath="$PROJECT_DIR$/conditions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/scss/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/scss/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/scss/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/scss/bootstrap.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/faq.html" beforeDir="false" afterPath="$PROJECT_DIR$/faq.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/jquery.counterup.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/jquery.counterup.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-acc.html" beforeDir="false" afterPath="$PROJECT_DIR$/new-acc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-pass.html" beforeDir="false" afterPath="$PROJECT_DIR$/new-pass.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/privacy.html" beforeDir="false" afterPath="$PROJECT_DIR$/privacy.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/return-pass.html" beforeDir="false" afterPath="$PROJECT_DIR$/return-pass.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +71,9 @@
       <workItem from="1571434131720" duration="8596000" />
       <workItem from="1571501189178" duration="4915000" />
       <workItem from="1571893894435" duration="38898000" />
-      <workItem from="1572151241194" duration="12415000" />
+      <workItem from="1572151241194" duration="14504000" />
+      <workItem from="1572182349530" duration="1638000" />
+      <workItem from="1572478994230" duration="10347000" />
     </task>
     <servers />
   </component>

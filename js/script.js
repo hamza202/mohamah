@@ -8,3 +8,4 @@ document.write('<script type="text/javascript" src="js/jquery.validate.js" ></sc
 document.write('<script type="text/javascript" src="js/sweetalert2.min.js" ></script>');
 document.write('<script type="text/javascript" src="js/pikaday.jquery.js" ></script>');
 document.write('<script type="text/javascript" src="js/parsley.min.js" ></script>');
+document.write('<script type="text/javascript" src="js/jquery.fileuploader.min.js" ></script>');

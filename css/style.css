@@ -2,6 +2,8 @@
 @import url(fontawesome-all.css);
 @import url(sweetalert2.css);
 @import url(pikaday.css);
+@import url(font/font-fileuploader.css);
+@import url(jquery.fileuploader.min.css);
 @import url("https://fonts.googleapis.com/css?family=Tajawal:400,500,700,800,900&display=swap");
 a:hover {
   text-decoration: none;
@@ -91,7 +93,7 @@ a:hover, header .navbar .navbar-nav .nav-item a:not(.log-out-btn):before, .foote
   cursor: pointer;
   background-color: #D59755;
   color: #fff;
-  padding: 8px 20px 10px 20px;
+  padding: 9px 20px 10px 20px;
   font-weight: 600; }
   .my-btn:focus, .sup-page-header .navbar .navbar-nav .nav-item a.log-out-btn:focus, header .navbar .navbar-nav .nav-item a.login-btn:focus, .my-btn:visited, .sup-page-header .navbar .navbar-nav .nav-item a.log-out-btn:visited, header .navbar .navbar-nav .nav-item a.login-btn:visited {
     outline: none; }
@@ -128,17 +130,16 @@ body {
     color: #1C1D2B; }
     .sup-page-header .navbar .navbar-nav .nav-item a.log-out-btn {
       margin-top: -2px;
-      border: 1px solid transparent;
+      border: 2px solid transparent;
       background-color: #F1F1F1;
       color: #797979;
       font-weight: 500; }
       .sup-page-header .navbar .navbar-nav .nav-item a.log-out-btn:hover {
-        background-color: #1C1D2B; }
+        background-color: #1C1D2B;
+        border: 2px solid #fff; }
       @media (max-width: 991.98px) {
         .sup-page-header .navbar .navbar-nav .nav-item a.log-out-btn {
-          margin-top: 10px; }
-          .sup-page-header .navbar .navbar-nav .nav-item a.log-out-btn:hover {
-            border: 1px solid #fff; } }
+          margin-top: 10px; } }
     .sup-page-header .navbar .navbar-nav .nav-item a:hover {
       color: #1C1D2B; }
       @media (max-width: 991.98px) {
@@ -426,8 +427,6 @@ header {
   width: 100%;
   background-color: #1C1D2B;
   z-index: 1000; }
-  .fixed.sticky .navbar {
-    padding-top: 15px; }
   .fixed.sticky .black-logo {
     display: inline-block; }
     .fixed.sticky .black-logo img {
@@ -686,7 +685,8 @@ header {
   background-color: #f1f1f1;
   border: 0;
   height: 47px;
-  font-weight: 500; }
+  font-weight: 500;
+  resize: none; }
 
 .form-control:focus {
   border-color: #d59755;
@@ -850,6 +850,31 @@ input[type=number]::-webkit-outer-spin-button {
       .top-bar ul li a:hover {
         background-color: #fafafa;
         color: #D59755; }
+
+.input-group-append {
+  margin-right: 0; }
+
+.fileuploader-input .fileuploader-input-button {
+  width: 100%;
+  text-align: center;
+  background: #1C1D2B; }
+
+.fileuploader-input .fileuploader-input-caption {
+  position: absolute;
+  z-index: -11;
+  opacity: 0; }
+
+.fileuploader {
+  position: relative; }
+  .fileuploader:after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 100%;
+    right: 0;
+    height: 30px;
+    background-color: #ffffff;
+    bottom: -37px; }
 
 /*btn-4 Start*/
 .btn-4 {
