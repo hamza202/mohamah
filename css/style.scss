@@ -1496,6 +1496,99 @@ a.case-container {
     }
   }
 }
+.order-card{
+  border-radius: 8px;
+  background-color: white;
+  padding: 15px;
+  h3{
+    line-height: 20px;
+    font-size: 22px;
+    font-weight: 600;
+  }
+}
+.order-card-img-review{
+  img{
+    border-radius: 8px;
+    height: 170px;
+    max-width: 100%;
+    object-fit: cover;
+  }
+}
+.text-gry{
+  color: #8F8F8F;
+}
+.order-d{
+  @include media-breakpoint-down(md){
+    border-top:1px solid rgba(112, 112, 112, 0.42);
+    padding-top: 15px;
+  }
+}
+.b-radius-8{
+  border-radius: 8px;
+}
+.green-bg{
+  background-color: #4DB82C;
+}
+.gry-bg{
+  background-color: #C6C6C6;
+}
+//review
+.product-reviews-summary .rating-summary {
+  position: relative;
+}
+.ating-summary .rating-result {
+  margin-left: 5px;
+  width: 88px;
+  position: relative;
+}
+.r-section .rating-summary .rating-result {
+  width: 76px;
+
+}
+.rating-summary .rating-result{
+  font-family: 'Font Awesome 5 Pro';
+  font-weight: 300;
+  text-align: center;
+}
+.rating-summary .rating-result:before {
+  font-weight: 300;
+  content: '\f005' '\f005' '\f005' '\f005' '\f005';
+  left: 1px;
+  position: absolute;
+  top: 1px;
+  width: 100%;
+  z-index: 1;
+  color: #c7c7c7;
+  font-size: 16px;
+  height: 16px;
+  letter-spacing: 1px;
+  line-height: 40px;
+  display: block;
+  font-style: normal;
+  speak: none;
+}
+.product-reviews-summary .rating-summary .rating-result span {
+  display: block;
+  overflow: hidden;
+  font-family: 'Font Awesome 5 pro';
+  padding-top: 11px;
+  margin-bottom: -11px;
+}
+.product-reviews-summary .rating-summary .rating-result span:before {
+  position: relative;
+  z-index: 2;
+  text-align: right;
+  color: #ffbb00;
+  font-size: 16px;
+  height: 18px;
+  letter-spacing: 1px;
+  line-height: 19px;
+  content: '\f005' '\f005' '\f005' '\f005' '\f005';
+  display: block;
+  font-style: normal;
+  font-weight: 900;
+  speak: none;
+}
 
 /*btn-4 End*/
 .h-85 {
