@@ -80,8 +80,9 @@ $(function () {
             $('#progress-complete').width('' + (i / count * 100) + '%');
         }
     });
+
     $('.next').on('click',function () {
-        if ($('#acc2').is(':checked')) {
+        if ($('#acc1').is(':checked')) {
             $('.if-lawyer-hide').addClass('d-none');
         }
     });
