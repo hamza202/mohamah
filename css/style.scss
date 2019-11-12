@@ -574,38 +574,38 @@ header {
     }
   }
 
-  .count-circle {
 
-    -webkit-box-shadow: 0px 0px 0px 18px rgba(255, 255, 255, 0.41);
-    -moz-box-shadow: 0px 0px 0px 18px rgba(255, 255, 255, 0.41);
-    box-shadow: 0px 0px 0px 18px rgba(255, 255, 255, 0.41);
-    width: 180px;
-    height: 180px;
-    margin: 0 auto;
-    margin-top: -10px;
-    background-color: white;
-    border-radius: 50%;
+}
+.count-circle {
 
-    img {
-      height: 50px;
-      width: auto;
-    }
+  -webkit-box-shadow: 0px 0px 0px 18px rgba(255, 255, 255, 0.41);
+  -moz-box-shadow: 0px 0px 0px 18px rgba(255, 255, 255, 0.41);
+  box-shadow: 0px 0px 0px 18px rgba(255, 255, 255, 0.41);
+  width: 180px;
+  height: 180px;
+  margin: 0 auto;
+  margin-top: -10px;
+  background-color: white;
+  border-radius: 50%;
 
-    h2 {
-      font-weight: 700;
-      margin-top: 5px;
-      margin-bottom: 0;
-    }
+  img {
+    height: 50px;
+    width: auto;
+  }
 
-    p {
-      margin: 0;
-      color: $mainColor;
-      font-size: 16px;
-      font-weight: 600;
-    }
+  h2 {
+    font-weight: 700;
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+
+  p {
+    margin: 0;
+    color: $mainColor;
+    font-size: 16px;
+    font-weight: 600;
   }
 }
-
 .line {
   width: 100%;
   height: 1px;
@@ -1257,11 +1257,6 @@ input[type=number]::-webkit-outer-spin-button {
   }
 }
 
-.icon-btn {
-  i {
-
-  }
-}
 
 .input-group-append {
   margin-right: 0;
@@ -1531,6 +1526,49 @@ a.case-container {
 }
 .gry-bg{
   background-color: #C6C6C6;
+}
+.blue-bg{
+  background-color: #4779CE;
+}
+.lawyer-card-img{
+  display: inline-block;
+  border-radius: 50%;
+  border: 10px solid #EFEFEF;
+  img{
+    object-fit: cover;
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.25);
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.25);
+  }
+}
+.no-cursor{
+  cursor: auto;
+}
+.lawyer-card{
+  .count-circle{
+    -webkit-box-shadow: 0px 0px 0px 13px rgba(239,239,239,1);
+    -moz-box-shadow: 0px 0px 0px 13px rgba(239,239,239,1);
+    box-shadow: 0px 0px 0px 13px rgba(239,239,239,1);
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    margin-top: 30px;
+    background-color: #d59755;
+    border-radius: 50%;
+     h2{
+      font-size: 25px;
+      color: white;
+    }
+  }
+}
+.lawyer-card-container{
+  .product-reviews-summary{
+    position: relative;
+    top: -5px ;
+  }
 }
 //review
 .product-reviews-summary .rating-summary {

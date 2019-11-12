@@ -80,11 +80,18 @@ $(function () {
             $('#progress-complete').width('' + (i / count * 100) + '%');
         }
     });
+    $('.next').on('click',function () {
+        if ($('#acc2').is(':checked')) {
+            $('.if-lawyer-hide').addClass('d-none');
+        }
+    });
 });
+
+
 
 //sweet alert
 $('.disabled-click').on('click', function () {
-    $('#acc1').attr("disabled", true);
+    $('#acc2').attr("disabled", true);
     Swal.fire({
         type: 'error',
         title: 'عذرا',
