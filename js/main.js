@@ -161,3 +161,29 @@ $(document).ready(function() {
     });
 
 });
+
+//number active
+
+$(function() {
+    var charLimit = 1;
+    $(".inputs").keydown(function(e) {
+
+        var keys = [8, 9, /*16, 17, 18,*/ 19, 20, 27, 105, 104 , 103, 102, 101, 100, 99, 98, 97, 96, 33, 34, 35, 36, 37, 38, 39, 40, 45, 46, 144, 145];
+
+        if (e.which == 8 && this.value.length == 0) {
+            $(this).prev('.inputs').focus();
+        } else if ($.inArray(e.which, keys) >= 0) {
+            return true;
+        } else if (this.value.length >= charLimit) {
+            $(this).next('.inputs').focus();
+            return false;
+        } else if (e.shiftKey || e.which <= 48 || e.which >= 58) {
+            return false;
+        }
+    }).keyup (function () {
+        if (this.value.length >= charLimit) {
+            $(this).next('.inputs').focus();
+            return false;
+        }
+    });
+});

@@ -1058,7 +1058,12 @@ header {
     color: $mainColor;
   }
 }
-
+.link-1{
+  color: $blackColor;
+  &:hover {
+    color: $mainColor;
+  }
+}
 .link-2 {
   color: $mainColor;
 
@@ -1568,6 +1573,41 @@ a.case-container {
   .product-reviews-summary{
     position: relative;
     top: -5px ;
+  }
+}
+.parsely-single-error{
+  position: relative;
+  height: 40px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  .parsley-errors-list{
+    top: 10px;
+    bottom: auto;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+  }
+}
+.parsely-single-error .filled ~ .filled {
+  display: none;
+}
+.ltr{
+  direction: ltr;
+}
+.active-inputs{
+  input{
+    margin: 0 5px;
+    height: 60px;
+    border-radius: 8px;
+    border: 0;
+    background-color: #F1F1F1;
+    outline: 0;
+    text-align: center;
+    font-size: 30px;
+    color: $mainColor;
+    font-weight: 800;
   }
 }
 //review
