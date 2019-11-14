@@ -187,3 +187,20 @@ $(function() {
         }
     });
 });
+
+
+//order Classification Select
+
+
+$('.order-classification').on('change',function () {
+    let selectTarget = $('.order-classification option:selected').val();
+    if(selectTarget === "1") {
+        $('.order-c-text').removeClass('d-none');
+        $('.order-c-select').addClass('d-none');
+    }
+    else{
+        $('.order-c-text').addClass('d-none');
+        $('.order-c-select').removeClass('d-none');
+    }
+});
+
