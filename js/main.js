@@ -204,3 +204,53 @@ $('.order-classification').on('change',function () {
     }
 });
 
+jQuery(document).ready(function () {
+    jQuery('#stars li').on('mouseover', function () {
+        var onStar = parseInt(jQuery(this).data('value'), 10);
+        jQuery(this).parent().children('li.star').each(function (e) {
+            if (e < onStar) {
+                jQuery(this).addClass('hover');
+            } else {
+                jQuery(this).removeClass('hover');
+            }
+        });
+
+    }).on('mouseout', function () {
+        jQuery(this).parent().children('li.star').each(function (e) {
+            jQuery(this).removeClass('hover');
+        });
+    });
+
+
+    /* 2. Action to perform on click */
+    jQuery('#stars li').on('click', function () {
+        var onStar = parseInt(jQuery(this).data('value'), 10);
+        var stars = jQuery(this).parent().children('li.star');
+
+        for (i = 0; i < stars.length; i++) {
+            jQuery(stars[i]).removeClass('selected');
+        }
+
+        for (i = 0; i < onStar; i++) {
+            jQuery(stars[i]).addClass('selected');
+        }
+
+        // JUST RESPONSE (Not needed)
+        var ratingValue = parseInt(jQuery('#stars li.selected').last().data('value'), 10);
+        var msg = "";
+        if (ratingValue > 1) {
+            msg = ratingValue;
+        } else {
+            msg = ratingValue;
+        }
+        responseMessage(msg);
+
+    });
+
+
+});
+
+function responseMessage(msg) {
+    jQuery('.success-box').fadeIn(200);
+    jQuery('.text-message-input').val(msg);
+}
