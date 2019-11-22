@@ -1562,11 +1562,22 @@ a.case-container {
     padding-top: 15px;
   }
 }
-
+.order-d-description{
+  padding-left: 3px;
+  p{
+    @extend %ellipsis;
+  }
+}
 .b-radius-8 {
   border-radius: 8px;
 }
-
+.my-btn.search-btn{
+  &:hover{
+    background-color: transparent;
+    color: $mainColor;
+    border: 2px solid $mainColor;
+  }
+}
 .green-bg {
   background-color: #4DB82C;
 }
