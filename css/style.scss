@@ -993,9 +993,11 @@ header {
 
         &.collapsed {
           i {
-            transform: translateY(-50%) rotate(0deg);
-            color: $blackColor;
-
+            &:before{
+              transform: translateY(-50%) rotate(0deg);
+              color: $blackColor;
+              display: block;
+            }
           }
         }
 
@@ -1004,14 +1006,15 @@ header {
         }
 
         i {
-          position: absolute;
-          font-size: 29px;
-          color: $mainColor;
-          left: 20px;
-          top: 50%;
-          transform: translateY(-50%) rotate(-180deg);
-          transition: all ease-in-out 0.3s;
-
+          &:before{
+            position: absolute;
+            font-size: 29px;
+            color: $mainColor;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%) rotate(-180deg);
+            transition: all ease-in-out 0.3s;
+          }
         }
       }
     }
@@ -1756,6 +1759,7 @@ a.case-container {
     height: auto;
   }
 }
+
 //evaluation
 .rating-stars ul {
   list-style-type: none;
@@ -1846,7 +1850,7 @@ a.case-container {
   position: relative;
   z-index: 2;
   text-align: right;
-  color: #ffbb00;
+  color: $mainColor;
   font-size: 16px;
   height: 18px;
   letter-spacing: 1px;
@@ -1862,7 +1866,47 @@ a.case-container {
 .h-85 {
   height: 85%;
 }
-
+.evaluation-accordion{
+  .card{
+    border-right: 8px solid $mainColor;
+    &:nth-child(even){
+      border-right-color:$blackColor ;
+    }
+    border-radius: 8px !important;
+    .card-header{
+      border-radius: 8px;
+      border: 0;
+      overflow: hidden;
+      button.btn{
+        .product-reviews-summary .rating-summary .rating-result span{
+          margin-bottom: -4px;
+        }
+        padding-left: 40px;
+        background-color: #fff;
+        i{
+          height: 100%;
+          background-color: $mainColor;
+          width: 30px;
+          color: white !important;
+          &:before{
+            color: #fff !important;
+            left: 8px;
+          }
+          left: 0;
+          position: absolute;
+          top: 0;
+        }
+      }
+    }
+    .card-body{
+      .comment-card-container{
+        border: 1px solid #C6C6C6;
+        border-radius: 8px;
+        padding: 10px;
+      }
+    }
+  }
+}
 ::selection {
   background-color: $mainColor;
   color: white;
