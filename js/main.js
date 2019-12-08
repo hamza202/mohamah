@@ -7,6 +7,13 @@ function detectmob() {
                 scrollspeed: 100
             });
         });
+        $(function () {
+            $(".chat-content").niceScroll({
+                cursorborder: "0",
+                cursorcolor: "#D59755",
+                scrollspeed: 100
+            });
+        });
     } else {
         console.log('false')
     }
