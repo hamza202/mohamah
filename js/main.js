@@ -254,3 +254,7 @@ function responseMessage(msg) {
     jQuery('.success-box').fadeIn(200);
     jQuery('.text-message-input').val(msg);
 }
+jQuery(document).ready(function () {
+    $(".chat-content").scrollTop($(".chat-content")[0].scrollHeight);
+});
+
