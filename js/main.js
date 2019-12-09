@@ -161,6 +161,13 @@ $("#new_case_form").validate({
         }
     }
 });
+$("#withdraw-balance-form").validate({
+
+    messages: {
+        withdraw_balance:'الرجاء ادخل المبلغ المراد سحبه'
+    }
+});
+
 $(document).ready(function() {
 
     $('input#multi-files').fileuploader({
@@ -261,7 +268,18 @@ function responseMessage(msg) {
     jQuery('.success-box').fadeIn(200);
     jQuery('.text-message-input').val(msg);
 }
+//scroll bottom
 jQuery(document).ready(function () {
-    $(".chat-content").scrollTop($(".chat-content")[0].scrollHeight);
+    if($('div').hasClass('scroll-bottom')){
+        $(".scroll-bottom").scrollTop($(".scroll-bottom")[0].scrollHeight);
+    }
 });
-
+//go to tabs
+var url = document.location.toString();
+if (url.match('#')) {
+    $('.nav-pills a[href="#' + url.split('#')[1] + '"]').tab('show');
+}
+//
+// $('.nav-pills a').on('shown.bs.tab', function (e) {
+//     window.location.hash = e.target.hash;
+// });

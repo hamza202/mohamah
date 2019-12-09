@@ -42,6 +42,7 @@ a:hover {
   }
 
 }
+
 %ellipsis {
   white-space: nowrap;
   overflow: hidden;
@@ -2084,17 +2085,20 @@ a.case-container {
     }
   }
 }
-.chat-send-container{
+
+.chat-send-container {
   padding: 20px;
   background-color: #E9E9E9;
 }
+
 .cheat-attachment {
   .attach-list li a span {
     width: 50px;
   }
 }
-.chat-send-container{
-  .chat-send-btn{
+
+.chat-send-container {
+  .chat-send-btn {
     border-radius: 50%;
     margin: 0;
     height: 44px;
@@ -2103,11 +2107,13 @@ a.case-container {
     background-color: $mainColor;
     border: 0;
     cursor: pointer;
-    i{
+
+    i {
       font-size: 20px;
     }
   }
-  .chat-send-input{
+
+  .chat-send-input {
     width: 100%;
     border: 0;
     height: 44px;
@@ -2115,10 +2121,12 @@ a.case-container {
     padding: 0 10px;
     outline: 0;
   }
-  #chat_upload{
+
+  #chat_upload {
     display: none;
   }
 }
+
 a.lightbox img {
   height: 150px;
   max-width: 100%;
@@ -2234,4 +2242,158 @@ a.lightbox-close:after {
 
 .lightbox-target:target a.lightbox-close {
   top: 0px;
+}
+
+//top tabs
+.top-tap {
+  background-color: $mainColor;
+
+  .nav-pills {
+    margin-bottom: 0;
+
+    .nav-item {
+      a.nav-link {
+        color: white;
+        padding: 12px 20px;
+        font-size: 17px;
+        border-radius: 0;
+        border-top: 1px solid transparent;
+
+        &.active {
+          background-color: #FAFAFA;
+          color: $mainColor;
+          border-top: 1px solid $gray-400;
+        }
+      }
+    }
+  }
+}
+
+.balance-available-container {
+  padding: 10px;
+  background-color: #F5F5F5;
+  border-radius: 5px;
+  border: 1px solid $gray-400;
+
+  p {
+    font-weight: 500;
+  }
+
+  .balance-available {
+    font-size: 25px;
+    font-weight: 600;
+    color: $mainColor;
+  }
+}
+
+.balance-history-container {
+  .balance-history {
+    &:not(:last-child){
+      margin-bottom: 15px;
+    }
+    padding: 7px 15px 7px 40px;
+    position: relative;
+    border-right: 9px solid $mainColor;
+    &:nth-child(even){
+      border-right: 9px solid $blackColor;
+    }
+    background-color: #FAFAFA;
+    -webkit-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1);
+    h3{
+      margin: 0;
+      color: $mainColor;
+      font-size: 22px;
+      font-weight: 600;
+    }
+    .info-date{
+      i{
+        background-color: #fff;
+        color: #4f505f;
+        font-size: 25px;
+        border-radius: 50%;
+        margin-top: 6px;
+      }
+      p{
+        margin-top: 2px !important;
+      }
+    }
+    i.fa-angle-left{
+      height: 100%;
+      background-color: #D59755;
+      width: 30px;
+      color: white !important;
+      left: 0;
+      position: absolute;
+      top: 0;
+      &:before{
+        position: absolute;
+        font-size: 29px;
+        color: #fff;
+        left: 11px;
+        top: 50%;
+        transform: translateY(-50%) ;
+        transition: all ease-in-out 0.3s;
+      }
+    }
+    &:hover {
+      -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
+      -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
+      box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+.case-info-container.balance-withdrawn{
+  .evaluation-accordion{
+    .card{
+      .card-body{
+        .comment-card-container{
+          background-color: white;
+          img{
+            width: 60px;
+            height: auto;
+          }
+        }
+      }
+      .card-header button.btn{
+        background-color: #fafafa;
+      }
+    }
+  }
+}
+.fs-18{
+  font-size: 18px;
+}
+.green-input{
+  border:1px solid #6BE048;
+  height: 45px;
+  border-radius: 5px;
+  outline: 0;
+  color: #6BE048;
+  font-size: 23px;
+  font-weight: 600;
+  &::-webkit-input-placeholder{
+    font-size: 15px;
+    font-weight: 500;
+  }
+  &:-ms-input-placeholder{
+    font-size: 15px;
+    font-weight: 500;
+  }
+  &::placeholder {
+    font-size: 15px;
+    font-weight: 500;
+  }
+}
+.withdraw-balance-card{
+  border: 1px solid #C6C6C6;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #F5F5F5;
+  img{
+    width: 60px;
+    height: auto;
+  }
 }
