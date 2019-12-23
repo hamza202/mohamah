@@ -14,6 +14,13 @@ function detectmob() {
                 scrollspeed: 100
             });
         });
+        // $(function () {
+        //     $(".notification-container .dropdown-menu-scroll").niceScroll({
+        //         cursorborder: "0",
+        //         cursorcolor: "#D59755",
+        //         scrollspeed: 100
+        //     });
+        // });
     } else {
         console.log('false')
     }
@@ -283,3 +290,23 @@ if (url.match('#')) {
 // $('.nav-pills a').on('shown.bs.tab', function (e) {
 //     window.location.hash = e.target.hash;
 // });
+
+
+//Change file img
+$(document).ready(function() {
+
+    $(".up1").on('change', function(){
+        var readURL = function(input=['file']) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('.pic1').attr('src', e.target.result);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        };
+        readURL(this);
+    });
+});
