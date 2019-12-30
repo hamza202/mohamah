@@ -59,6 +59,9 @@
                         </div>
                         <form action="#"  data-parsley-validate="" data-parsley-trigger="change">
                             <div class="edit-profile-photo">
+                                <i class="up-click">
+                                    <img src="img/up-click.svg" alt="">
+                                </i>
                                 <img class="profile-pic pic1" src="img/big-upload.png" alt="">
                                 <div class="change-photo-btn">
                                     <div class="photoUpload">
@@ -68,6 +71,9 @@
                             </div>
                             <div class="row mt-5">
                                 <div class="col-md-6">
+                                    <label>
+                                        الأسم الأول:
+                                    </label>
                                     <div class="form-group  mb-4 ">
                                         <input type="text" class="form-control" required
                                                data-parsley-required-message="ادخل الإسم الأول"
@@ -75,6 +81,9 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
+                                    <label>
+                                        الأسم الأخير:
+                                    </label>
                                     <div class="form-group  mb-4 ">
                                         <input type="text" class="form-control" required
                                                data-parsley-required-message="ادخل الإسم الأخير"
@@ -83,6 +92,9 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group mb-4">
+                                        <label>
+                                            الجنس:
+                                        </label>
                                         <div class="my-select">
                                             <select class="form-control my-select"  required
                                                     data-parsley-required-message="اختر الجنس">
@@ -95,6 +107,9 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group mb-4">
+                                        <label>
+                                            تاريخ الميلاد:
+                                        </label>
                                         <input class="form-control" name="date" placeholder="تاريخ الميلاد" type="text"
                                                data-parsley-required-message="ادخل تاريخ ميلادك"
                                                id="datepicker" required>
@@ -102,6 +117,9 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group mb-4">
+                                        <label>
+                                            بريد الكتروني:
+                                        </label>
                                         <input name="email" placeholder="بريد الكتروني" type="email"
                                                class="form-control" required
                                                data-parsley-required-message="ادخل بريدك الإلكتروني"/>
@@ -109,6 +127,9 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group mb-4">
+                                        <label>
+                                            الجنسية:
+                                        </label>
                                         <div class="my-select">
                                             <select class="form-control my-select" required
                                                     data-parsley-required-message="اختر جنسيتك">
@@ -121,6 +142,9 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group mb-4">
+                                        <label>
+                                            المدينة:
+                                        </label>
                                         <div class="my-select">
                                             <select class="form-control my-select" required
                                                     data-parsley-required-message="اختر مدينتك">
@@ -133,6 +157,9 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group mb-4">
+                                        <label>
+                                            مجال العمل:
+                                        </label>
                                         <div class="my-select">
                                             <select class="form-control my-select" required
                                                     data-parsley-required-message="اختر مجال عملك">
@@ -145,10 +172,30 @@
                                 </div>
                                 <div class="col-md-12" >
                                     <div class="form-group mb-4 custom-file-container">
+                                        <label>
+                                            تحديث رخصة المزاولة:
+                                        </label>
                                         <div class="custom-file">
                                             <input type="file" class="custom-file-input" id="customFile">
                                             <label class="custom-file-label" for="customFile">تحديث رخصة المزاولة</label>
                                         </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group  mb-4 ">
+                                        <label>
+                                            تغير كلمة المرور:
+                                        </label>
+                                        <input type="password" class="form-control" id="pw" required placeholder="كلمة المرور الجديدة" >
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>
+                                        تأكيد كلمة المرور:
+                                    </label>
+                                    <div class="form-group  mb-4 ">
+                                        <input type="password" class="form-control" required data-parsley-equalto="#pw"
+                                               placeholder="تأكيد كلمة المرور">
                                     </div>
                                 </div>
                             </div>

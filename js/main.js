@@ -310,3 +310,6 @@ $(document).ready(function() {
         readURL(this);
     });
 });
+$('.up-click').on('click',function () {
+    $('.file-upload').click();
+});

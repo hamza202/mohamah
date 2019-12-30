@@ -231,12 +231,19 @@ body {
 
 .sup-page-header {
   width: 100%;
-  height: 121px;
+  height: 111px;
   background-color: white;
   position: relative;
 
   header .navbar {
     padding-top: 0.5rem;
+  }
+
+  .navbar-nav {
+  align-items: center;
+    li{
+      display: flex;
+    }
   }
 
   .navbar .navbar-nav .nav-item a {
@@ -249,7 +256,7 @@ body {
       color: #797979;
       font-weight: 500;
       @extend %my-btn;
-
+      padding: 6px 20px 7px 20px;
       &:hover {
         background-color: $blackColor;
         border: 2px solid #fff;
@@ -356,32 +363,43 @@ header {
 
     .navbar-brand {
       img {
-        max-height: 95px;
+        max-height: 85px;
         width: auto;
       }
     }
 
     .navbar-nav {
       .nav-item {
-        &.notification-container{
-          .dropdown-menu{
-            .dropdown-menu-scroll{
+        &.notification-container {
+          .dropdown-menu {
+            .dropdown-menu-scroll {
               max-height: 400px;
               overflow-x: hidden;
               @extend %scroll-style;
               overflow-y: scroll;
-              @include media-breakpoint-down(lg){
+              @include media-breakpoint-down(lg) {
                 max-height: 160px;
               }
+              .dropdown-item{
+                background: #f8f9fa;
+                &.read{
+                  background-color: #fff;
+                }
+                &:active{
+                  background: none;
+                }
+              }
             }
+
             border: 0;
-            -webkit-box-shadow: 0px 3px 12px 0px rgba(0,0,0,0.16);
-            -moz-box-shadow: 0px 3px 12px 0px rgba(0,0,0,0.16);
-            box-shadow: 0px 3px 12px 0px rgba(0,0,0,0.16);
+            -webkit-box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.16);
+            -moz-box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.16);
+            box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.16);
             left: 0;
             right: auto;
             min-width: 270px;
             max-width: 300px;
+
             &:before {
               content: '';
               position: absolute;
@@ -394,36 +412,43 @@ header {
               top: -6px;
               left: 12px;
             }
-            a{
-              &:not(:last-child){
+
+            a {
+              &:not(:last-child) {
                 border-bottom: 1px solid #DCDCDC;
                 padding-bottom: 8px;
               }
+
               white-space: normal;
-              span{
+
+              span {
                 font-size: 13px;
                 color: #CECECE;
               }
-              p{
-                .my-color{
+
+              p {
+                .my-color {
                   color: $mainColor !important;
                 }
+
                 margin-bottom: 0;
                 font-size: 14px;
                 color: #A6A6A6;
               }
             }
-            @include media-breakpoint-down(lg){
+
+            @include media-breakpoint-down(lg) {
               margin: 0 auto;
               position: relative;
-              &:before{
+              &:before {
                 left: 50%;
                 transform: translateX(-50%);
               }
             }
           }
-          .notification-drop{
-            &.new-notification{
+
+          .notification-drop {
+            &.new-notification {
               i {
                 position: relative;
 
@@ -441,13 +466,16 @@ header {
                 }
               }
             }
-            color: #858585 ;
+
+            color: #858585;
             font-size: 22px;
-            &:after{
+
+            &:after {
               display: none;
             }
           }
         }
+
         @include media-breakpoint-up(lg) {
           padding-right: 30px;
         }
@@ -790,7 +818,16 @@ header {
   z-index: 1000;
 
   .navbar {
-    @extend %transition5
+    @extend %transition5;
+    padding-top: 10px;
+
+    .navbar-nav {
+      align-items: center;
+
+      li {
+        display: flex;
+      }
+    }
   }
 
   .black-logo {
@@ -947,7 +984,7 @@ header {
   }
 
   .footer-logo {
-    max-width: 120px;
+    max-width: 110px;
   }
 
   h4 {
@@ -991,7 +1028,7 @@ header {
     }
 
     img {
-      max-width: 135px;
+      max-width: 120px;
       height: auto;
     }
   }
@@ -1066,6 +1103,7 @@ header {
   h2 {
     font-weight: 700;
     min-width: 200px;
+    font-size: 27px;
     @include media-breakpoint-down(md) {
       font-size: 20px;
 
@@ -1222,7 +1260,7 @@ header {
 .parsley-errors-list {
   position: absolute;
   bottom: -20px;
-  font-size: 15px;
+  font-size: 14px;
   margin: 0;
   list-style: none;
   padding: 0;
@@ -1230,7 +1268,7 @@ header {
 }
 
 input.parsley-error,
-input.error, select.error {
+input.error, select.error , textarea.parsley-error{
   border: 1px solid red !important;
 }
 
@@ -1568,7 +1606,7 @@ input[type=number]::-webkit-outer-spin-button {
 
       span {
         @extend %ellipsis;
-        width: 80px;
+        width: 81px;
         display: block;
         padding: 0 2px;
         padding-bottom: 2px;
@@ -2503,6 +2541,7 @@ a.lightbox-close:after {
     height: auto;
   }
 }
+
 .edit-profile-photo {
   margin: 10px auto;
   display: block;
@@ -2510,6 +2549,23 @@ a.lightbox-close:after {
   width: 150px;
   height: 150px;
   position: relative;
+  i.up-click{
+    position: absolute;
+    bottom: 4px;
+    right: 6px;
+    z-index: 10;
+    border-radius: 50%;
+    padding: 5px;
+    background-color: #ffffff;
+    border: 2px solid #f5f5f5;
+    cursor: pointer;
+
+    img{
+      width: 25px;
+      height: auto;
+      border-radius: 0;
+    }
+  }
 }
 
 .edit-profile-photo img {
@@ -2521,6 +2577,7 @@ a.lightbox-close:after {
 
 .edit-profile-photo .change-photo-btn {
   background-color: transparent;
+  border: 3px solid #f5f5f5;
   border-radius: 50%;
   display: inline-block;
   font-size: 13px;
@@ -2556,4 +2613,13 @@ a.lightbox-close:after {
   border-radius: 50%;
   opacity: 0;
   filter: alpha(opacity=0);
+}
+.doc-title{
+  font-size: 18px;
+  font-weight: 600;
+}
+#validation_check{
+  .parsley-errors-list{
+    bottom: 0 ;
+  }
 }

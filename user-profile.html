@@ -57,34 +57,48 @@
                         <div class="text-center mb-4">
                             <h2 class="second-title">المعلومات الشخصيه</h2>
                         </div>
-                        <form action="#"  data-parsley-validate="" data-parsley-trigger="change">
+                        <form action="#" data-parsley-validate="" data-parsley-trigger="change">
                             <div class="edit-profile-photo">
+                                <i class="up-click">
+                                    <img src="img/up-click.svg" alt="">
+                                </i>
                                 <img class="profile-pic pic1" src="img/big-upload.png" alt="">
                                 <div class="change-photo-btn">
                                     <div class="photoUpload">
-                                        <input type="file" name="file1" class="upload file-upload up1" data-parsley-errors-container="#file1_upload" required="" data-parsley-required-message="اختر صوره شخصية">
+                                        <input type="file" name="file1" class="upload file-upload up1"
+                                               data-parsley-errors-container="#file1_upload" required=""
+                                               data-parsley-required-message="اختر صوره شخصية">
                                     </div>
                                 </div>
                             </div>
                             <div class="row mt-5">
                                 <div class="col-md-6">
                                     <div class="form-group  mb-4 ">
+                                        <label>
+                                            الأسم الأول:
+                                        </label>
                                         <input type="text" class="form-control" required
                                                data-parsley-required-message="ادخل الإسم الأول"
-                                               placeholder="الأسم الأول"value="محمد">
+                                               placeholder="الأسم الأول" value="محمد">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group  mb-4 ">
+                                        <label>
+                                            الإسم الأخير:
+                                        </label>
                                         <input type="text" class="form-control" required
                                                data-parsley-required-message="ادخل الإسم الأخير"
-                                               placeholder="الأسم الأخير"value="صقر">
+                                               placeholder="الأسم الأخير" value="صقر">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group mb-4">
+                                        <label>
+                                            الجنس:
+                                        </label>
                                         <div class="my-select">
-                                            <select class="form-control my-select"  required
+                                            <select class="form-control my-select" required
                                                     data-parsley-required-message="اختر الجنس">
                                                 <option value="">الجنس</option>
                                                 <option value="male">ذكر</option>
@@ -95,6 +109,9 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group mb-4">
+                                        <label>
+                                            تاريخ الميلاد:
+                                        </label>
                                         <input class="form-control" name="date" placeholder="تاريخ الميلاد" type="text"
                                                data-parsley-required-message="ادخل تاريخ ميلادك"
                                                id="datepicker" required>
@@ -103,6 +120,9 @@
 
                                 <div class="col-md-6">
                                     <div class="form-group mb-4">
+                                        <label>
+                                            الجنسية:
+                                        </label>
                                         <div class="my-select">
                                             <select class="form-control my-select" required
                                                     data-parsley-required-message="اختر جنسيتك">
@@ -115,6 +135,9 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group mb-4">
+                                        <label>
+                                            المدينة:
+                                        </label>
                                         <div class="my-select">
                                             <select class="form-control my-select" required
                                                     data-parsley-required-message="اختر مدينتك">
@@ -125,11 +148,70 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="col-12 mb-3">
+                                    <label class="d-block mb-1">
+                                        تخصصات المحامي:
+                                    </label>
+                                    <div class="custom-control custom-checkbox d-inline-block mr-2">
+                                        <input type="checkbox"  class="custom-control-input"
+                                               id="customCheck1" name="lawyerSpecialization[]"
+                                               required data-parsley-errors-container="#validation_check"
+                                               data-parsley-required-message="يجب اختيار تخصص على الأقل">
+                                        <label class="custom-control-label" for="customCheck1">تخصص1</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox d-inline-block mr-2">
+                                        <input type="checkbox"  class="custom-control-input"
+                                               id="customCheck2" name="lawyerSpecialization[]">
+                                        <label class="custom-control-label" for="customCheck2">تخصص2</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox d-inline-block mr-2">
+                                        <input type="checkbox"  class="custom-control-input"
+                                               id="customCheck3" name="lawyerSpecialization[]">
+                                        <label class="custom-control-label" for="customCheck3">تخصص3</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox d-inline-block mr-2">
+                                        <input type="checkbox" class="custom-control-input"
+                                               id="customCheck4" name="lawyerSpecialization[]">
+                                        <label class="custom-control-label" for="customCheck4">تخصص4</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox d-inline-block mr-2">
+                                        <input type="checkbox"  class="custom-control-input"
+                                               id="customCheck5" name="lawyerSpecialization[]">
+                                        <label class="custom-control-label" for="customCheck5">تخصص5</label>
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-12">
+                                    <div id="validation_check" class="position-relative">
+
+                                    </div>
+                                </div>
                                 <div class="col-md-12">
                                     <div class="form-group mb-4">
+                                        <label>
+                                            بريد الكتروني:
+                                        </label>
                                         <input name="email" placeholder="بريد الكتروني" type="email"
                                                class="form-control" required
                                                data-parsley-required-message="ادخل بريدك الإلكتروني"/>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group  mb-4 ">
+                                        <label>
+                                            تعديل كلمة المرور:
+                                        </label>
+                                        <input type="password" class="form-control" required id="pw"
+                                               placeholder="كلمة المرور الجديدة">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group  mb-4 ">
+                                        <label>
+                                            تأكيد كلمة المرور:
+                                        </label>
+                                        <input type="password" class="form-control" required data-parsley-equalto="#pw"
+                                               placeholder="تأكيد كلمة المرور">
                                     </div>
                                 </div>
                             </div>
