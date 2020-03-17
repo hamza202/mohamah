@@ -240,8 +240,9 @@ body {
   }
 
   .navbar-nav {
-  align-items: center;
-    li{
+    align-items: center;
+
+    li {
       display: flex;
     }
   }
@@ -257,6 +258,7 @@ body {
       font-weight: 500;
       @extend %my-btn;
       padding: 6px 20px 7px 20px;
+
       &:hover {
         background-color: $blackColor;
         border: 2px solid #fff;
@@ -380,12 +382,15 @@ header {
               @include media-breakpoint-down(lg) {
                 max-height: 160px;
               }
-              .dropdown-item{
+
+              .dropdown-item {
                 background: #f8f9fa;
-                &.read{
+
+                &.read {
                   background-color: #fff;
                 }
-                &:active{
+
+                &:active {
                   background: none;
                 }
               }
@@ -1268,7 +1273,7 @@ header {
 }
 
 input.parsley-error,
-input.error, select.error , textarea.parsley-error{
+input.error, select.error, textarea.parsley-error {
   border: 1px solid red !important;
 }
 
@@ -2549,7 +2554,8 @@ a.lightbox-close:after {
   width: 150px;
   height: 150px;
   position: relative;
-  i.up-click{
+
+  i.up-click {
     position: absolute;
     bottom: 4px;
     right: 6px;
@@ -2560,7 +2566,7 @@ a.lightbox-close:after {
     border: 2px solid #f5f5f5;
     cursor: pointer;
 
-    img{
+    img {
       width: 25px;
       height: auto;
       border-radius: 0;
@@ -2614,12 +2620,59 @@ a.lightbox-close:after {
   opacity: 0;
   filter: alpha(opacity=0);
 }
-.doc-title{
+
+.doc-title {
   font-size: 18px;
   font-weight: 600;
 }
-#validation_check{
-  .parsley-errors-list{
-    bottom: 0 ;
+
+#validation_check {
+  .parsley-errors-list {
+    bottom: 0;
+  }
+}
+
+.social-list {
+  li {
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      height: 45px;
+      width: 45px;
+      background-color: #ececec;
+      font-size: 17px;
+      transition: all ease-in-out 0.3s;
+      &.face-icon{
+        color:#0077B5;
+        border: solid 1px #0077B5;
+        &:hover{
+          color: white;
+          background-color: #0077B5;
+        }
+      }
+      &.twitter-icon{
+        color:#55acee;
+        border: solid 1px #55acee;
+        &:hover{
+          color: white;
+          background-color: #55acee;
+        }
+      }
+      &.insta-icon{
+        color:#e4405f;
+        border: solid 1px #e4405f;
+        &:hover{
+          color: white;
+          background-color: #e4405f;
+        }
+      }
+    }
+  }
+}
+.maroof-logo{
+  img{
+    width: 100px;
   }
 }
