@@ -95,7 +95,7 @@ $(function () {
         }
     });
 
-    $('.next').on('click',function () {
+    $('.next').on('click', function () {
         if ($('#acc1').is(':checked')) {
             $('.if-lawyer-hide').addClass('d-none');
         }
@@ -103,18 +103,34 @@ $(function () {
 });
 
 
-
 //sweet alert
 $('.disabled-click').on('click', function () {
     $('#acc2').attr("disabled", true);
     Swal.fire({
-        type: 'error',
+        type: 'warning',
         title: 'عذرا',
-        confirmButtonText: 'اغلاق',
-        confirmButtonColor: '#6c757d',
-        text: 'التسجيل في الوقت الحالي متاح للمحامين فقط',
+        showCancelButton: true,
+        confirmButtonText: 'اشتراك',
+        cancelButtonText: 'اغلاق',
+        confirmButtonColor: '#D59755',
+        html: '<p><b>التسجيل في الوقت الحالي متاح للمحامين فقط</b></p>' +
+            '<p>فضلاً قم بتزويدنا ببريدك الإلكتروني وسيتم إعلامك حالما يتاح التسجيل في المنصة كمستفيد</p>',
+        input: 'email',
+        inputPlaceholder: 'البريد الإلكتروني',
+        inputClass: 'custom-input-class',
+        validationMessage:"بريد الكتروني غير صحيح"
+    }).then((result) => {
+        if (result.value) {
+            Swal.fire({
+                title: 'شكراً لتسجيلك معنا',
+                text: 'سوق نقوم بإبلاغكم حالما يتم السماح للمستفيدين بالتسجيل في منصة محاماة',
+                type: 'success',
+                confirmButtonColor: '#D59755',
+                confirmButtonText: 'اغلاق'
+            })
+        }
     })
-});
+})
 
 //calendar piker
 var picker = new Pikaday({
@@ -159,8 +175,8 @@ $("#new_case_form").validate({
     messages: {
         country: "الرجاء اختر دولتك",
         nationality: "الرجاء اختر جنسيتك",
-        case_details:{
-          minlength:  $.validator.format("يجب ادخال على الأقل {0} احرف"),
+        case_details: {
+            minlength: $.validator.format("يجب ادخال على الأقل {0} احرف"),
         },
         phone: {
             maxlength: $.validator.format(" الرقم غير صحيح"),
@@ -171,11 +187,11 @@ $("#new_case_form").validate({
 $("#withdraw-balance-form").validate({
 
     messages: {
-        withdraw_balance:'الرجاء ادخل المبلغ المراد سحبه'
+        withdraw_balance: 'الرجاء ادخل المبلغ المراد سحبه'
     }
 });
 
-$(document).ready(function() {
+$(document).ready(function () {
 
     $('input#multi-files').fileuploader({
         addMore: true,
@@ -185,11 +201,11 @@ $(document).ready(function() {
 
 //number active
 
-$(function() {
+$(function () {
     var charLimit = 1;
-    $(".inputs").keydown(function(e) {
+    $(".inputs").keydown(function (e) {
 
-        var keys = [8, 9, /*16, 17, 18,*/ 19, 20, 27, 105, 104 , 103, 102, 101, 100, 99, 98, 97, 96, 33, 34, 35, 36, 37, 38, 39, 40, 45, 46, 144, 145];
+        var keys = [8, 9, /*16, 17, 18,*/ 19, 20, 27, 105, 104, 103, 102, 101, 100, 99, 98, 97, 96, 33, 34, 35, 36, 37, 38, 39, 40, 45, 46, 144, 145];
 
         if (e.which == 8 && this.value.length == 0) {
             $(this).prev('.inputs').focus();
@@ -201,7 +217,7 @@ $(function() {
         } else if (e.shiftKey || e.which <= 48 || e.which >= 58) {
             return false;
         }
-    }).keyup (function () {
+    }).keyup(function () {
         if (this.value.length >= charLimit) {
             $(this).next('.inputs').focus();
             return false;
@@ -213,13 +229,12 @@ $(function() {
 //order Classification Select
 
 
-$('.order-classification').on('change',function () {
+$('.order-classification').on('change', function () {
     let selectTarget = $('.order-classification option:selected').val();
-    if(selectTarget === "1") {
+    if (selectTarget === "1") {
         $('.order-c-text').removeClass('d-none');
         $('.order-c-select').addClass('d-none');
-    }
-    else{
+    } else {
         $('.order-c-text').addClass('d-none');
         $('.order-c-select').removeClass('d-none');
     }
@@ -275,9 +290,10 @@ function responseMessage(msg) {
     jQuery('.success-box').fadeIn(200);
     jQuery('.text-message-input').val(msg);
 }
+
 //scroll bottom
 jQuery(document).ready(function () {
-    if($('div').hasClass('scroll-bottom')){
+    if ($('div').hasClass('scroll-bottom')) {
         $(".scroll-bottom").scrollTop($(".scroll-bottom")[0].scrollHeight);
     }
 });
@@ -293,10 +309,10 @@ if (url.match('#')) {
 
 
 //Change file img
-$(document).ready(function() {
+$(document).ready(function () {
 
-    $(".up1").on('change', function(){
-        var readURL = function(input=['file']) {
+    $(".up1").on('change', function () {
+        var readURL = function (input = ['file']) {
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
 
@@ -310,6 +326,6 @@ $(document).ready(function() {
         readURL(this);
     });
 });
-$('.up-click').on('click',function () {
+$('.up-click').on('click', function () {
     $('.file-upload').click();
 });
