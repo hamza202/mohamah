@@ -118,6 +118,9 @@ $('.disabled-click').on('click', function () {
         input: 'email',
         inputPlaceholder: 'البريد الإلكتروني',
         inputClass: 'custom-input-class',
+        inputAttributes:{
+            name: 'hamza'
+        },
         validationMessage:"بريد الكتروني غير صحيح"
     }).then((result) => {
         if (result.value) {
